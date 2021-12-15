@@ -1,4 +1,4 @@
-import { ethers, errors } from "ethers";
+import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import { EtherError } from "../../types/Ethereum";
 import { hasEthereum } from "../../util/ethereum";
