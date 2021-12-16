@@ -1,11 +1,16 @@
 import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import HomePage from "./pages/home/HomePage";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div>
-      <HomePage />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <HomePage />
+      </div>
+    </QueryClientProvider>
   );
 }
 

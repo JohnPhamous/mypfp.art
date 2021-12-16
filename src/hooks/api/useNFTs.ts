@@ -50,5 +50,7 @@ const getNFTs = async (walletAddress: string): Promise<OpenSeaResponse> => {
 };
 
 export default function useGetNFTs(walletAddress: string) {
-  return useQuery("nfts", () => getNFTs(walletAddress));
+  return useQuery("nfts", () => getNFTs(walletAddress), {
+    keepPreviousData: true,
+  });
 }
