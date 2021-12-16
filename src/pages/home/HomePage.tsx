@@ -1,5 +1,6 @@
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
+import NFTPicker from "../../components/NFTPicker";
 import { EtherError } from "../../types/Ethereum";
 import { hasEthereum } from "../../util/ethereum";
 
@@ -72,6 +73,7 @@ const HomePage = () => {
         <>
           <h4>Your Wallet Address</h4>
           <p>{connectedWalletAddress}</p>
+          <NFTPicker walletAddress={connectedWalletAddress} />
         </>
       )}
     </div>
